@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +17,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Normal Account without verification
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Admin Account without verification
+Route::middleware(['auth:sanctum', 'is_admin'])->group(function () {
+
+    // dashboard pages
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Categories
+    Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+    Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+    Route::delete('/categories/{category_id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+    Route::put('/categories/update', [CategoryController::class, 'update'])->name('categories.update');
+
+
+    // Users
+    Route::get('/users', [UserController::class, 'index'])->name('users');
+    Route::post('/users', [UserController::class, 'store'])->name('users.store');
+    Route::put('/users/update', [UserController::class, 'update'])->name('users.update');
+    Route::post('/users/ban', [UserController::class, 'ban'])->name('user.ban');
+});
