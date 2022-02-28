@@ -45,7 +45,7 @@
         <div class="pb-20 bg-gray-200 -mt-24">
           <div class="container mx-auto px-4">
 
-            <div id="Search" class="container md:w-3/4 relative justify-center items-center mx-auto rounded-lg p-10 md:p-20" style="background-color: #fff;">
+            <div id="Search" class="container md:w-11/12 relative justify-center items-center mx-auto rounded-lg p-10 md:p-20" style="background-color: #fff;">
               <audio id="sound"></audio>
               <div class="">
                   <div class="wrapper">

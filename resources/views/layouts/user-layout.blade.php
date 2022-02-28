@@ -38,7 +38,7 @@
     <x-jet-banner />
     @include('sweetalert::alert')
 
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen">
         @include('user-navigation-menu')
 
         <!-- Page Heading -->
