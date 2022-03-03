@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\User\Gregg1Controller;
+use App\Http\Controllers\User\Gregg2Controller;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 // Normal Account without verification
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+
+    Route::get('/gregg_1', [Gregg1Controller::class, 'index'])->name('gregg1');
+
+    Route::get('/gregg_2', [Gregg2Controller::class, 'index'])->name('gregg2');
 });
 
 // Admin Account without verification
