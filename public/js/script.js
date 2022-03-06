@@ -8,7 +8,7 @@ btn.addEventListener("click", () => {
     steno_result.innerHTML = null;
 
     let inpWord = document.getElementById("inp-word").value;
-    let obj = arr.find(o => o.name === inpWord);
+    let obj = gregg1_content.find(o => o.name === inpWord);
     // console.log(obj);
     if(obj != null){
         steno_result.innerHTML = `
@@ -80,7 +80,7 @@ inputBox.onkeyup = (e)=>{
 
             searchWrapper.classList.remove("active");
         }
-        emptyArray = suggestions.filter((data)=>{
+        emptyArray = gregg1.filter((data)=>{
             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
             return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
         });
@@ -89,7 +89,7 @@ inputBox.onkeyup = (e)=>{
             return data = `<li>${data}</li>`;
         });
         searchWrapper.classList.add("active"); //show autocomplete box
-        showSuggestions(emptyArray);
+        showgregg1(emptyArray);
         let allList = suggBox.querySelectorAll("li");
         for (let i = 0; i < allList.length; i++) {
             //adding onclick attribute in all li tag
@@ -126,7 +126,7 @@ function select(element){
     searchWrapper.classList.remove("active");
 }
 
-function showSuggestions(list){
+function showgregg1(list){
     let listData;
     if(!list.length){
         userValue = inputBox.value;
