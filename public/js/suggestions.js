@@ -1,4 +1,4 @@
-let suggestions = [
+let gregg1 = [
     "Channel",
     "CodingLab",
     "CodingNepal",
@@ -27,7 +27,7 @@ let suggestions = [
     "What does CSS stands for?",
 ];
 
-let arr = [
+let gregg1_content = [
     { name:"YouTube", video:"https://www.youtube.com/embed/4demEYCkxwE", other: "that" },
     { name:"Channel", video:"https://www.youtube.com/embed/BvkUYfzYGg4", other: "that" },
 ];
