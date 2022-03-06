@@ -82,6 +82,14 @@
                 in classes, lectures and business meetings. It is still being used to take notes even
                 with the advent of personal recording devices.
                 </p>
+                <a href="{{ route('gregg1') }}">
+                <button class="text-white font-semibold py-2 px-5 text-sm mt-3 mb-10 inline-flex items-center group rounded-md" style="background-color: #261F16;">
+                    <p>GREGG 1</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-2 delay-100 duration-200 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </a>
               </div>
               <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                   <img
@@ -136,6 +144,14 @@
                     used synonymously with the term shorthand, it technically is the physical process of
                     transcribing in shorthand either with a writing implement or a stenography machine.
                   </p>
+                  <a href="{{ route('gregg2') }}">
+                    <button class="text-white font-semibold py-2 px-5 text-sm mt-7 inline-flex items-center group rounded-md" style="background-color: #261F16;">
+                        <p>GREGG 2</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-2 delay-100 duration-200 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </a>
                 </div>
               </div>
             </div>

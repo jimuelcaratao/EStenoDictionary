@@ -52,7 +52,7 @@
               </li>
             </ul>
 
-            @guest
+                        @guest
                         @if (Route::has('login'))
                             <div class="md:px-6 py-4 sm:block">
                                 <a href="{{ route('login') }}" class="text-sm text-white dark:text-gray-500">Log
@@ -65,7 +65,8 @@
                             </div>
                         @endif
                     @endguest
-        @auth
+
+                        @auth
                         <x-jet-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
