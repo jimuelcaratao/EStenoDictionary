@@ -9,27 +9,26 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <!--Tailwind css-->
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    @stack('styles')
 
     <!--Scripts-->
     <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/script.js') }}" defer></script>
-    <script src="{{ asset('js/scroll.js') }}" defer></script>
-    <script src="{{ asset('js/suggestions.js') }}" defer></script>
-    <script src="{{ asset('js/toggle.js') }}" defer></script>
-    <script src="{{ asset('js/ui.js') }}" defer></script>
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Serif+Pro:wght@200;300;400&display=swap"
+        rel="stylesheet">
 
     @livewireStyles
 </head>
@@ -64,6 +63,14 @@
     @stack('modals')
 
     @livewireScripts
+
+    <script src="{{ asset('js/scroll.js') }}" defer></script>
+    <script src="{{ asset('js/toggle.js') }}" defer></script>
+    <script src="{{ asset('js/ui.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/script.js') }}" defer></script> --}}
+    {{-- <script src="{{ asset('js/suggestions.js') }}" defer></script> --}}
+    @stack('scripts')
+
 </body>
 
 </html>
