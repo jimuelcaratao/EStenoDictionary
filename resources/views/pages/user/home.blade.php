@@ -45,7 +45,70 @@
         <div class="pb-20 bg-gray-200 -mt-24">
           <div class="container mx-auto px-4">
 
-            <div id="Search" class="container md:w-11/12 relative justify-center items-center mx-auto rounded-lg p-10 md:p-20" style="background-color: #fff;">
+            <div class="flex flex-wrap">
+              <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                <div
+                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+                >
+                  <div class="px-4 py-5 flex-auto">
+                    <h6 class="text-xl font-semibold uppercase">Gregg 1 Dictionary</h6>
+                    <p class="mt-2 mb-4 text-gray-600">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit.
+                    </p>
+                    <a href="{{ route('gregg1') }}">
+                      <button class="text-white font-semibold py-2 px-5 text-sm mt-3 inline-flex items-center group rounded-md" style="background-color: #261F16;">
+                          <p>GREGG 1</p>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-2 delay-100 duration-200 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-4/12 px-4 text-center">
+                <div
+                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+                >
+                  <div class="px-4 py-5 flex-auto">
+                    <div
+                      class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full" style="background-color: #261F16;"
+                    >
+                    <i class="fas fa-book"></i>
+                    </div>
+                    <h6 class="text-xl font-semibold">E-STENO</h6>
+                    <p class="mt-2 mb-4 text-gray-600">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+                <div
+                  class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+                >
+                  <div class="px-4 py-5 flex-auto">
+                    <h6 class="text-xl font-semibold uppercase">Gregg 2 Dictionary</h6>
+                    <p class="mt-2 mb-4 text-gray-600">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit.
+                    </p>
+                    <a href="{{ route('gregg1') }}">
+                      <button class="text-white font-semibold py-2 px-5 text-sm mt-3 inline-flex items-center group rounded-md" style="background-color: #261F16;">
+                          <p>GREGG 2</p>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-2 delay-100 duration-200 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {{-- <div id="Search" class="container md:w-11/12 relative justify-center items-center mx-auto rounded-lg p-10 md:p-20" style="background-color: #fff;">
               <audio id="sound"></audio>
               <div class="">
                   <div class="wrapper">
@@ -62,7 +125,8 @@
 
                   <div class="steno_result" id="steno_result"></div>
               </div>
-            </div>
+            </div> --}}
+
 
             <div id="About" class="flex flex-wrap items-center mt-32">
               <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
@@ -82,14 +146,7 @@
                 in classes, lectures and business meetings. It is still being used to take notes even
                 with the advent of personal recording devices.
                 </p>
-                <a href="{{ route('gregg1') }}">
-                <button class="text-white font-semibold py-2 px-5 text-sm mt-3 mb-10 inline-flex items-center group rounded-md" style="background-color: #261F16;">
-                    <p>GREGG 1</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-2 delay-100 duration-200 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-                </a>
+
               </div>
               <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                   <img
@@ -144,14 +201,6 @@
                     used synonymously with the term shorthand, it technically is the physical process of
                     transcribing in shorthand either with a writing implement or a stenography machine.
                   </p>
-                  <a href="{{ route('gregg2') }}">
-                    <button class="text-white font-semibold py-2 px-5 text-sm mt-7 inline-flex items-center group rounded-md" style="background-color: #261F16;">
-                        <p>GREGG 2</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-2 delay-100 duration-200 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </a>
                 </div>
               </div>
             </div>
