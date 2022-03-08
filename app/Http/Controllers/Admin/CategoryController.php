@@ -89,7 +89,7 @@ class CategoryController extends Controller
     public function destroy($category_id)
     {
         if (is_null($category_id)) {
-            return Redirect::route('category')->withInfo('Yawa!');
+            return Redirect::route('category')->withInfo('Encountered an error!');
         }
 
         // fetching info
