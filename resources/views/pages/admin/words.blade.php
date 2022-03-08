@@ -37,7 +37,7 @@
             <div class="mb-4">
                 <form>
                     <input class="focus:ring-indigo-500 focus:border-indigo-500  sm:text-sm border-gray-300 rounded-md"
-                        type="search" name="search" placeholder="Category name" aria-label="Search"
+                        type="search" name="search" placeholder="Word name" aria-label="Search"
                         value="{{ request()->search }}">
 
                     <button type="submit" class="text-gray-600 hover:text-gray-800 mx-2 ">
@@ -59,11 +59,27 @@
                         <tr>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Category ID
+                                Word ID
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Category Name
+                                Word
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Category
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Description
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                YouTube Link
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Status
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -76,41 +92,81 @@
                     </x-slot>
                     {{-- Rows --}}
                     <x-slot name="tableRow">
-                        @forelse ($categories as $category)
+                        @forelse ($words as $word)
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900">
-                                                {{ $category->category_id }}
+                                                {{ $word->word_id }}
                                             </div>
                                         </div>
                                     </div>
                                 </td>
 
                                 <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex">
+                                        <div class="text-sm font-medium text-gray-900">
+                                            {{ $word->word_name }}
+                                        </div>
+                                    </div>
+                                </td>
+
+
+                                <td class="px-6 py-4 whitespace-nowrap">
                                     <span
                                         class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                        {{ $category->category_name }}
+                                        {{ $word->category_name }}
                                     </span>
                                 </td>
+
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex">
+                                        <div class="text-sm font-medium text-gray-900">
+                                            {{ $word->description }}
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex">
+                                        <div class="text-sm font-medium text-gray-900">
+                                            {{ $word->default_video }}
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex">
+                                        <div class="text-sm font-medium text-gray-900">
+                                            {{ $word->status }}
+                                        </div>
+                                    </div>
+                                </td>
+
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="text-sm text-gray-900 font-bold">
-                                        {{ \Carbon\Carbon::parse($category->created_at)->format('d / F / Y') }}
+                                        {{ \Carbon\Carbon::parse($word->created_at)->format('d / F / Y') }}
                                     </div>
                                 </td>
                                 <td class="pl-2 pr-6 py-4 whitespace-nowrap flex text-right text-base font-medium">
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#edit-modal-category"
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#edit-modal-word"
                                         data-tooltip="tooltip" data-placement="top" title="Edit"
-                                        data-community="{{ json_encode($category) }}"
-                                        data-item-category_name="{{ $category->category_name }}"
-                                        data-item-category_id="{{ $category->category_id }}" id="edit-item-category"
+                                        data-community="{{ json_encode($word) }}"
+                                        data-item-word_id="{{ $word->word_id }}"
+                                        data-item-word_name="{{ $word->word_name }}"
+                                        data-item-category_name="{{ $word->category_name }}"
+                                        data-item-status="{{ $word->status }}"
+                                        data-item-description="{{ $word->description }}"
+                                        data-item-default_photo="{{ $word->default_photo }}"
+                                        data-item-default_video="{{ $word->default_video }}"
+                                        data-item-photo_1="{{ $word->photo_1 }}"
+                                        data-item-photo_2="{{ $word->photo_2 }}" id="edit-item-word"
                                         class="text-indigo-600 hover:text-indigo-900 mr-3 text-decoration-none">
                                         <i class="far fa-edit"></i>
                                     </a>
-                                    <form class="delete-category"
-                                        action="{{ route('categories.destroy', [$category->category_id]) }}"
-                                        method="POST">
+                                    <form class="delete-word"
+                                        action="{{ route('words.destroy', [$word->word_id]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:text-red-900"><i
@@ -121,9 +177,8 @@
                         @empty
                             <tr>
                                 <td colspan="8" class="pr-4 py-8 whitespace-nowrap text-sm font-medium text-center">
-                                    <img class="mx-auto d-block text-center py-4" style="width: 275px"
-                                        src="{{ asset('img/empty.svg') }}" alt="no categories">
-                                    Hmmm.. There is no Categories in here.
+
+                                    Hmmm.. There is no Words in here. Add some more.
                                 </td>
                             </tr>
                         @endforelse
@@ -138,23 +193,33 @@
         <div class="col-md-8 d-flex justify-content-center">
             {{-- pagination --}}
             <div class="pagination">
-                {{ $categories->render('pagination::bootstrap-4') }}
+                {{ $words->render('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>
 
 
 
-    <x-category.add-modal>
-    </x-category.add-modal>
-    <x-category.edit-modal>
-    </x-category.edit-modal>
+    <x-word.add-modal>
+        <x-slot name="categoryOptions">
+            @foreach ($categories as $category)
+                <option value="{{ $category->category_name }}">{{ $category->category_name }}</option>
+            @endforeach
+        </x-slot>
+    </x-word.add-modal>
+    <x-word.edit-modal>
+        <x-slot name="categoryOptions">
+            @foreach ($categories as $category)
+                <option value="{{ $category->category_name }}">{{ $category->category_name }}</option>
+            @endforeach
+        </x-slot>
+    </x-word.edit-modal>
 
 
     @push('scripts')
         <script>
             //delete
-            $(".delete-category").click(function(e) {
+            $(".delete-word").click(function(e) {
                 e.preventDefault();
                 swal({
                         title: "Are you sure to Delete?",
@@ -175,9 +240,9 @@
             });
 
 
-            // if category not null
-            $('#category_name').on('input', function(e) {
-                $('#submit_category').removeAttr('disabled');
+            // if word not null
+            $('#word_name').on('input', function(e) {
+                $('#submit_word').removeAttr('disabled');
             });
         </script>
     @endpush
