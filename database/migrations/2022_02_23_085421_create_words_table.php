@@ -14,11 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('words', function (Blueprint $table) {
-            $table->id();
+            $table->id('word_id');
             $table->string('category_name');
-            $table->string('word', 255)->unique();
+            $table->string('word_name', 255);
             $table->longText('description')->nullable();
             $table->string('status');
+            $table->text('default_video')->nullable();
             $table->text('default_photo')->nullable();
             $table->text('photo_1')->nullable();
             $table->text('photo_2')->nullable();

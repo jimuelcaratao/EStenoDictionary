@@ -18,13 +18,13 @@
                             {{ __('Dashboard') }}
                         </x-jet-nav-link>
 
-                        {{-- <x-jet-nav-link href="{{ route('words') }}" :active="request()->routeIs('words')">
-                        {{ __('Words') }}
-                    </x-jet-nav-link> --}}
-
-                        <x-jet-nav-link href="{{ route('categories') }}" :active="request()->routeIs('categories')">
-                            {{ __('Categories') }}
+                        <x-jet-nav-link href="{{ route('words') }}" :active="request()->routeIs('words')">
+                            {{ __('Words') }}
                         </x-jet-nav-link>
+
+                        {{-- <x-jet-nav-link href="{{ route('categories') }}" :active="request()->routeIs('categories')">
+                            {{ __('Categories') }}
+                        </x-jet-nav-link> --}}
 
                         <x-jet-nav-link href="{{ route('users') }}" :active="request()->routeIs('users')">
                             {{ __('Users') }}
@@ -175,14 +175,14 @@
                     {{ __('Dashboard') }}
                 </x-jet-responsive-nav-link>
 
-                {{-- <x-jet-responsive-nav-link href="{{ route('words') }}" :active="request()->routeIs('words')">
-                {{ __('Words') }}
-            </x-jet-responsive-nav-link> --}}
+                <x-jet-responsive-nav-link href="{{ route('words') }}" :active="request()->routeIs('words')">
+                    {{ __('Words') }}
+                </x-jet-responsive-nav-link>
 
-                <x-jet-responsive-nav-link href="{{ route('categories') }}"
+                {{-- <x-jet-responsive-nav-link href="{{ route('categories') }}"
                     :active="request()->routeIs('categories')">
                     {{ __('Categories') }}
-                </x-jet-responsive-nav-link>
+                </x-jet-responsive-nav-link> --}}
 
                 <x-jet-responsive-nav-link href="{{ route('users') }}" :active="request()->routeIs('users')">
                     {{ __('Users') }}
