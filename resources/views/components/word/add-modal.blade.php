@@ -102,6 +102,7 @@
                                         </p>
                                     </div>
                                     <div class="grid">
+                                        {{-- default photo --}}
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700">
                                                 Cover photo
@@ -130,6 +131,63 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mt-10">
+                                                Photo (optional)
+                                            </label>
+                                            <div
+                                                class="mt-1 flex justify-center px-6 py-3 border-2 border-gray-300 border-dashed rounded-md">
+                                                <div class="space-y-1 text-center">
+
+                                                    <img id="output_photo_1" class="cursor-pointer mb-4"
+                                                        src="{{ asset('img/cover-img.svg') }}"
+                                                        style="width:400px;height:200px;">
+
+                                                    <div class="flex text-sm text-gray-600 ">
+                                                        <label for="photo_1"
+                                                            class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                            <span class="align-middle text-center">Upload a file</span>
+                                                            <input id="photo_1" name="photo_1" type="file" required
+                                                                class="sr-only" accept=".jpg,.gif,.png,.jpeg">
+                                                        </label>
+                                                        {{-- <p class="pl-1">or drag and drop</p> --}}
+                                                    </div>
+                                                    <p class="text-xs text-gray-500">
+                                                        PNG, JPG, GIF up to 5MB
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mt-10">
+                                                Photo (optional)
+                                            </label>
+                                            <div
+                                                class="mt-1 flex justify-center px-6 py-3 border-2 border-gray-300 border-dashed rounded-md">
+                                                <div class="space-y-1 text-center">
+
+                                                    <img id="output_photo_2" class="cursor-pointer mb-4"
+                                                        src="{{ asset('img/cover-img.svg') }}"
+                                                        style="width:400px;height:200px;">
+
+                                                    <div class="flex text-sm text-gray-600 ">
+                                                        <label for="photo_2"
+                                                            class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                            <span class="align-middle text-center">Upload a file</span>
+                                                            <input id="photo_2" name="photo_2" type="file" required
+                                                                class="sr-only" accept=".jpg,.gif,.png,.jpeg">
+                                                        </label>
+                                                        {{-- <p class="pl-1">or drag and drop</p> --}}
+                                                    </div>
+                                                    <p class="text-xs text-gray-500">
+                                                        PNG, JPG, GIF up to 5MB
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -157,8 +215,24 @@
             $('#default_photo').trigger('click');
         });
 
+        $('#output_photo_1').click(function() {
+            $('#photo_1').trigger('click');
+        });
+
+        $('#output_photo_2').click(function() {
+            $('#photo_2').trigger('click');
+        });
+
         $(document).on("change", "#default_photo", function() {
             document.getElementById('output_default_photo').src = window.URL.createObjectURL(this.files[0])
+        });
+
+        $(document).on("change", "#photo_1", function() {
+            document.getElementById('output_photo_1').src = window.URL.createObjectURL(this.files[0])
+        });
+
+        $(document).on("change", "#photo_2", function() {
+            document.getElementById('output_photo_2').src = window.URL.createObjectURL(this.files[0])
         });
 
         $(document).ready(function() {

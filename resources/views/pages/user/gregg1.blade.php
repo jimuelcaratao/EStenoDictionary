@@ -43,7 +43,8 @@
                     </div>
                     <div class="result" id="result"></div>
                     <div class="steno_result" id="steno_result"></div>
-
+                    <div class="photo_1_result" id="photo_1_result"></div>
+                    <div class="photo_2_result" id="photo_2_result"></div>
                     {{-- <div class="word mt-10">
                         <center>
                             <iframe id="ytplayer" type="text/html" class="yt-player mt-10"
@@ -87,25 +88,50 @@
             const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
             const result = document.getElementById("result");
             const steno_result = document.getElementById("steno_result");
+            const photo_1_result = document.getElementById("photo_1_result");
+            const photo_2_result = document.getElementById("photo_2_result");
+
             const sound = document.getElementById("sound");
             const btn = document.getElementById("search-btn");
 
             btn.addEventListener("click", () => {
                 steno_result.innerHTML = null;
+                photo_1_result.innerHTML = null;
+                photo_2_result.innerHTML = null;
 
                 let inpWord = document.getElementById("inp-word").value;
                 let obj = gregg1_content.find(o => o.name === inpWord);
                 console.log(obj);
                 if (obj != null) {
                     steno_result.innerHTML = `
-                    <center>
+                        <center>
                             <iframe id="ytplayer" type="text/html" class="yt-player mt-10"
                                 src="${obj.video}" frameborder="0"></iframe>
                             <img class="wordimg mt-10" src="{{ asset('storage/words_${obj.id}_${obj.default_photo}') }}"
                                 alt="${obj.name}'s steno image">
 
                         </center>
-                    `;
+                        `;
+
+                    if (obj.photo_1 != '') {
+                        photo_1_result.innerHTML = `
+                            <center>
+                            <img class="wordimg mt-10" src="{{ asset('storage/words_photo_1_${obj.id}_${obj.photo_1}') }}"
+                                alt="${obj.name}'s steno image">
+                            </center>
+                        `;
+                    }
+
+                    if (obj.photo_2 != '') {
+                        photo_2_result.innerHTML = `
+                            <center>
+                            <img class="wordimg mt-10" src="{{ asset('storage/words_photo_2_${obj.id}_${obj.photo_2}') }}"
+                                alt="${obj.name}'s steno image">
+                            </center>
+                        `;
+                    } else {
+                        photo_2_result.innerHTML = null;
+                    }
                 } else {
                     steno_result.innerHTML = `<h3 class="error">Couldn't Find The Steno Video for this Word.</h3>`;
                 }
@@ -158,6 +184,8 @@
                     description: "{{ $gregg->description }}",
                     category: "{{ $gregg->category_name }}",
                     default_photo: "{{ $gregg->default_photo }}",
+                    photo_1: "{{ $gregg->photo_1 }}",
+                    photo_2: "{{ $gregg->photo_2 }}",
                     },
                 @endforeach
             ];
