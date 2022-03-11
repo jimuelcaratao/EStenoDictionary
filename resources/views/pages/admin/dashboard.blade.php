@@ -34,7 +34,8 @@
                                                 class="fa fa-wallet fa-2x fa-inverse"></i></div>
                                     </div>
                                     <div class="flex-1 text-right md:text-center">
-                                        <h5 class="font-bold uppercase text text-gray-600 text-sm">Pending Articles</h5>
+                                        <h5 class="font-bold uppercase text text-gray-600 text-sm">Total Gregg 1 Words
+                                        </h5>
                                         <h3 class="font-bold text-2xl text-black">123<span
                                                 class="text-purple-500"></span></h3>
                                     </div>
@@ -54,7 +55,7 @@
                                                 class="fa fa-wallet fa-2x fa-inverse"></i></div>
                                     </div>
                                     <div class="flex-1 text-right md:text-center">
-                                        <h5 class="font-bold uppercase text-gray-600 text-sm">Total Articles</h5>
+                                        <h5 class="font-bold uppercase text-gray-600 text-sm">Total Gregg 2 Words</h5>
                                         <h3 class="font-bold text-2xl text-black">123<span
                                                 class="text-green-500"></span></h3>
                                     </div>
@@ -113,7 +114,7 @@
                     {{-- most populart products --}}
                     <div class="w-full  xl:w-1/3 p-4 lg:pl-10">
                         <div class="bg-white h-96 rounded p-5 shadow-md hover:shadow-xl transition delay-75">
-                            <h3 class="font-bold text-2xl">Most Popular Articles</h3>
+                            <h3 class="font-bold text-2xl">Most Popular Words</h3>
                             {{-- @forelse ($popular_items as $popular_item)
                                 <li>
                                     <a

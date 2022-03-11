@@ -32,7 +32,7 @@
 
                 @if (Auth::user()->is_admin == 1)
                     <li class="flex items-center">
-                        <a href="#Search">
+                        <a href="{{ route('dashboard') }}">
                             <button
                                 class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0  mb-3"
                                 type="button" style="transition: all 0.15s ease 0s;">
@@ -86,14 +86,14 @@
 
                     <x-slot name="content">
 
-                        <!-- Account Management -->
+                        {{-- <!-- Account Management -->
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             {{ __('Manage Account') }}
                         </div>
 
                         <x-jet-dropdown-link href="{{ route('profile.show') }}">
                             {{ __('Profile') }}
-                        </x-jet-dropdown-link>
+                        </x-jet-dropdown-link> --}}
 
                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                             <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
