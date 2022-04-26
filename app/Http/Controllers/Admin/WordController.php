@@ -52,6 +52,9 @@ class WordController extends Controller
 
     public function store(Request $request)
     {
+
+        // dd($request->all());
+
         $validator = Validator::make($request->all(), [
             'word_name' => 'required',
             'category_name' => 'required',
@@ -59,9 +62,19 @@ class WordController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return Redirect::route('word')
+            return Redirect::route('words')
                 ->with('toast_error', $validator->messages()->all())
                 ->withInput();
+        }
+
+        // condition if duplicate word in 1 Category
+
+        $word_fetch = Word::where('category_name', $request->input('category_name'))->where('word_name', $request->input('word_name'))->first();
+
+        // dd($word_fetch);
+        if ($word_fetch != null) {
+            return Redirect::route('words')
+                ->with('toast_error', 'Duplicated Word');
         }
 
         $word = Word::create([
@@ -147,6 +160,7 @@ class WordController extends Controller
 
     public function update(Request $request)
     {
+        // dd($request->all());
         $validator = Validator::make($request->all(), [
             'word_name' => 'required',
             'category_name' => 'required',
@@ -154,7 +168,7 @@ class WordController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return Redirect::route('word')
+            return Redirect::route('words')
                 ->with('toast_error', $validator->messages()->all())
                 ->withInput();
         }
@@ -192,7 +206,62 @@ class WordController extends Controller
             }
         }
 
+        // photo 1
+        if ($request->hasFile('photo_1') != null) {
+            if ($request->file('photo_1')->isValid()) {
+                // create images
+                $image       = $request->file('photo_1');
+                $filename    = $image->getClientOriginalName();
+                $word_id =  $request->input('word_id');
+
+                $image_resize = Image::make($image);
+                $image_resize->resize(1200, 600);
+
+                $image_resize->save(public_path('storage/words_photo_1_'
+                    . $word_id . '_' . $filename));
+
+                // insert path to db 
+                $char = strval($filename);
+                Word::where('word_id', $word_id)
+                    ->update([
+                        'photo_1' => $char,
+                    ]);
+            }
+        }
+
+        // photo 2
+        if ($request->hasFile('photo_2') != null) {
+            if ($request->file('photo_2')->isValid()) {
+                // create images
+                $image       = $request->file('photo_2');
+                $filename    = $image->getClientOriginalName();
+                $word_id =  $request->input('word_id');
+
+                $image_resize = Image::make($image);
+                $image_resize->resize(1200, 600);
+
+                $image_resize->save(public_path('storage/words_photo_2_'
+                    . $word_id . '_' . $filename));
+
+                // insert path to db 
+                $char = strval($filename);
+                Word::where('word_id', $word_id)
+                    ->update([
+                        'photo_2' => $char,
+                    ]);
+            }
+        }
+
+
         return Redirect::route('words')->withSuccess('Word: ' . $request->input('word_name') . ' updated successfully!');
+    }
+
+    public function add_viewers(Request $request)
+    {
+        Word::where('word_name', $request->input('inpWord'))->update([
+            'viewers' => 123,
+        ]);
+        return ['sad' => 'sad'];
     }
 
     public function destroy($word_id)

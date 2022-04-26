@@ -111,6 +111,7 @@
                                         </p>
                                     </div>
                                     <div class="grid">
+
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700">
                                                 Cover photo
@@ -119,7 +120,10 @@
                                                 class="mt-1 flex justify-center px-6 py-3 border-2 border-gray-300 border-dashed rounded-md">
                                                 <div class="space-y-1 text-center">
 
-                                                    <img id="output" src="" style="width:400px;height:400px;">
+                                                    {{-- <img id="output" src="" style="width:400px;height:400px;"> --}}
+
+                                                    <img id="output" class="cursor-pointer mb-4" src=""
+                                                        style="width:400px;height:200px;">
 
                                                     <div class="flex text-sm text-gray-600 ">
                                                         <label for="edit_default_photo"
@@ -137,6 +141,62 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mt-10">
+                                                Photo (optional)
+                                            </label>
+                                            <div
+                                                class="mt-1 flex justify-center px-6 py-3 border-2 border-gray-300 border-dashed rounded-md">
+                                                <div class="space-y-1 text-center">
+
+                                                    <img id="output_1" class="cursor-pointer mb-4" src=""
+                                                        style="width:400px;height:200px;">
+
+                                                    <div class="flex text-sm text-gray-600 ">
+                                                        <label for="edit_photo_1"
+                                                            class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                            <span class="align-middle text-center">Upload a file</span>
+                                                            <input id="edit_photo_1" name="photo_1" type="file"
+                                                                class="sr-only" accept=".jpg,.gif,.png,.jpeg">
+                                                        </label>
+                                                        {{-- <p class="pl-1">or drag and drop</p> --}}
+                                                    </div>
+                                                    <p class="text-xs text-gray-500">
+                                                        PNG, JPG, GIF up to 5MB
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mt-10">
+                                                Photo (optional)
+                                            </label>
+                                            <div
+                                                class="mt-1 flex justify-center px-6 py-3 border-2 border-gray-300 border-dashed rounded-md">
+                                                <div class="space-y-1 text-center">
+
+                                                    <img id="output_2" class="cursor-pointer mb-4" src=""
+                                                        style="width:400px;height:200px;">
+
+                                                    <div class="flex text-sm text-gray-600 ">
+                                                        <label for="edit_photo_2"
+                                                            class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                            <span class="align-middle text-center">Upload a file</span>
+                                                            <input id="edit_photo_2" name="photo_2" type="file"
+                                                                class="sr-only" accept=".jpg,.gif,.png,.jpeg">
+                                                        </label>
+                                                        {{-- <p class="pl-1">or drag and drop</p> --}}
+                                                    </div>
+                                                    <p class="text-xs text-gray-500">
+                                                        PNG, JPG, GIF up to 5MB
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                     </div>
                                 </div>
 
@@ -166,14 +226,32 @@
             $('#edit_default_photo').trigger('click');
         });
 
-        $(document).ready(function() {
-            elem = document.getElementById('#edit_description');
-            if (elem.clientHeight < elem.scrollHeight) elem.style.height = elem.scrollHeight + "px";
+        $('#output_1').click(function() {
+            $('#edit_photo_1').trigger('click');
         });
+
+        $('#output_2').click(function() {
+            $('#edit_photo_2').trigger('click');
+        });
+
         // image preview
         $(document).on("change", "#edit_default_photo", function() {
             document.getElementById('output').src = window.URL.createObjectURL(this.files[0])
         });
+
+        $(document).on("change", "#edit_photo_1", function() {
+            document.getElementById('output_1').src = window.URL.createObjectURL(this.files[0])
+        });
+
+        $(document).on("change", "#edit_photo_2", function() {
+            document.getElementById('output_2').src = window.URL.createObjectURL(this.files[0])
+        });
+
+        $(document).ready(function() {
+            elem = document.getElementById('#edit_description');
+            if (elem.clientHeight < elem.scrollHeight) elem.style.height = elem.scrollHeight + "px";
+        });
+
 
         $(document).ready(function() {
             $(".closeModalClickEdit").click(function() {
@@ -235,8 +313,33 @@
                 $("#edit_description").val(description);
                 $("#edit_default_video").val(default_video);
 
-                $("img#output").attr('src', $("img#output").attr('src') +
-                    `{{ asset('storage/words_${word_id}_${default_photo}') }}`);
+                if (default_photo != '') {
+                    $("img#output").attr('src', $("img#output").attr('src') +
+                        `{{ asset('storage/words_${word_id}_${default_photo}') }}`);
+                }
+                if (default_photo == '') {
+                    $("img#output").attr('src', $("img#output").attr('src') +
+                        `{{ asset('img/cover-img.svg') }}`);
+                }
+
+                if (photo_1 != '') {
+                    $("img#output_1").attr('src', $("img#output_1").attr('src') +
+                        `{{ asset('storage/words_photo_1_${word_id}_${photo_1}') }}`);
+                }
+                if (photo_1 == '') {
+                    $("img#output_1").attr('src', $("img#output_1").attr('src') +
+                        `{{ asset('img/cover-img.svg') }}`);
+                }
+
+                if (photo_2 != '') {
+                    $("img#output_2").attr('src', $("img#output_2").attr('src') +
+                        `{{ asset('storage/words_photo_2_${word_id}_${photo_2}') }}`);
+                }
+                if (photo_2 == '') {
+                    $("img#output_2").attr('src', $("img#output_2").attr('src') +
+                        `{{ asset('img/cover-img.svg') }}`);
+                }
+
                 // alert(word_name);
 
             });
@@ -251,6 +354,8 @@
                 // $("button#edit_submit_word").attr("disabled", true);
                 // image preview reset
                 $('#output').attr('src', '');
+                $('#output_1').attr('src', '');
+                $('#output_2').attr('src', '');
             });
         });
     </script>
