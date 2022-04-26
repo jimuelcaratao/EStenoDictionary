@@ -31,15 +31,17 @@
                 <audio id="sound"></audio>
                 <div class="">
                     <div class="wrapper">
-                        <div class="search-input">
-                            <a href="" target="_blank" hidden></a>
-                            <input type="text" placeholder="Type to search.."
-                                class="text-base text-gray-800 flex-grow outline-none px-2 py-3" id="inp-word">
-                            <div class="autocom-box" style="background-color: #fff;">
+                        <form id="searching" method="POST">
+                            <div class="search-input">
+                                <a href="" target="_blank" hidden></a>
+                                <input type="text" placeholder="Type to search.."
+                                    class="text-base text-gray-800 flex-grow outline-none px-2 py-3" id="inp-word">
+                                <div class="autocom-box" style="background-color: #fff;">
+                                </div>
+                                <div class="icon" id="search-btn"><i class="fas fa-search"
+                                        style="color: #261F16;"></i></div>
                             </div>
-                            <div class="icon" id="search-btn"><i class="fas fa-search"
-                                    style="color: #261F16;"></i></div>
-                        </div>
+                        </form>
                     </div>
                     <div class="result" id="result"></div>
                     <div class="steno_result" id="steno_result"></div>
@@ -104,7 +106,10 @@
                 console.log(obj);
                 if (obj != null) {
                     steno_result.innerHTML = `
+                            <p class="capitalize text-4xl mt-10">${obj.name}'s Steno Video</p>
+                            <p class=" text-lg my-5">${obj.description}
                         <center>
+                            </p>
                             <iframe id="ytplayer" type="text/html" class="yt-player mt-10"
                                 src="${obj.video}" frameborder="0"></iframe>
                             <img class="wordimg mt-10" src="{{ asset('storage/words_${obj.id}_${obj.default_photo}') }}"
@@ -136,13 +141,28 @@
                     steno_result.innerHTML = `<h3 class="error">Couldn't Find The Steno Video for this Word.</h3>`;
                 }
 
+                fetch('http://127.0.0.1:8000/add_viewers', {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            inpWord: inpWord,
+                        })
+                    }).then(res => res.json())
+                    .then((res) => {
+                        console.log(res)
+                    });
+
+
                 fetch(`${url}${inpWord}`)
                     .then((response) => response.json())
                     .then((data) => {
                         console.log(data);
                         result.innerHTML = `
             <div class="word">
-                    <h3>${inpWord}</h3>
+                    <h3 class="capitalize">${inpWord}</h3>
                 </div>
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>
@@ -158,7 +178,7 @@
                         sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
                     })
                     .catch(() => {
-                        result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`;
+                        result.innerHTML = `<h3 class="error"></h3>`;
                     });
             });
         </script>

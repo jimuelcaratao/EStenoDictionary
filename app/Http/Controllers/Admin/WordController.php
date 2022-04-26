@@ -62,9 +62,19 @@ class WordController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return Redirect::route('word')
+            return Redirect::route('words')
                 ->with('toast_error', $validator->messages()->all())
                 ->withInput();
+        }
+
+        // condition if duplicate word in 1 Category
+
+        $word_fetch = Word::where('category_name', $request->input('category_name'))->where('word_name', $request->input('word_name'))->first();
+
+        // dd($word_fetch);
+        if ($word_fetch != null) {
+            return Redirect::route('words')
+                ->with('toast_error', 'Duplicated Word');
         }
 
         $word = Word::create([
@@ -158,7 +168,7 @@ class WordController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return Redirect::route('word')
+            return Redirect::route('words')
                 ->with('toast_error', $validator->messages()->all())
                 ->withInput();
         }
@@ -244,6 +254,14 @@ class WordController extends Controller
 
 
         return Redirect::route('words')->withSuccess('Word: ' . $request->input('word_name') . ' updated successfully!');
+    }
+
+    public function add_viewers(Request $request)
+    {
+        Word::where('word_name', $request->input('inpWord'))->update([
+            'viewers' => 123,
+        ]);
+        return ['sad' => 'sad'];
     }
 
     public function destroy($word_id)

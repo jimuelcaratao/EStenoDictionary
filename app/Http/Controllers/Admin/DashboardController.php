@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Visit;
+use App\Models\Word;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -34,6 +35,12 @@ class DashboardController extends Controller
         $new_users = User::whereMonth('created_at', '=', Carbon::now()->month)
             ->count();
 
+        $gregg_1 = Word::where('category_name', 'Gregg 1')
+            ->count();
+
+        $gregg_2 = Word::where('category_name', 'Gregg 2')
+            ->count();
+
         //   $article_count = Article::where('article_status', 'Published')->count();
 
         //   $article_pending = Article::where('article_status', 'Pending Approval')->count();
@@ -41,12 +48,9 @@ class DashboardController extends Controller
         //   $article_count_today = Article::whereDate('created_at', Carbon::today())
         //       ->count();
 
-        //   $popular_items = ArticleStatistic::select('id')
-        //       ->groupBy('id')
-        //       ->orderByRaw('COUNT(*) DESC')
-        //       ->limit(5)
-        //       ->get();
+        // $popular_items = Word::take(6)->orderBy('viewers', 'DESC')->get();
 
+        $popular_items = Word::take(6)->latest()->get();
         $page_visits = Visit::select([
             // This aggregates the data and makes available a 'count' attribute
             DB::raw('count(visit_id) as `count`'),
@@ -63,12 +67,15 @@ class DashboardController extends Controller
         return view('pages.admin.dashboard', [
             'users' => $users,
             'new_users' => $new_users,
+            'gregg_1' => $gregg_1,
+            'gregg_2' => $gregg_2,
+
             //   'article_count' => $article_count,
             //   'article_pending' => $article_pending,
             //   'article_count_today' => $article_count_today,
             'dayTerm' => $dayTerm,
             'page_visits' => $page_visits,
-            //   'popular_items' => $popular_items,
+            'popular_items' => $popular_items,
 
         ]);
     }

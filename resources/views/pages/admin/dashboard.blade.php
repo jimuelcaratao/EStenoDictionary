@@ -36,7 +36,7 @@
                                     <div class="flex-1 text-right md:text-center">
                                         <h5 class="font-bold uppercase text text-gray-600 text-sm">Total Gregg 1 Words
                                         </h5>
-                                        <h3 class="font-bold text-2xl text-black">123<span
+                                        <h3 class="font-bold text-2xl text-black">{{ $gregg_1 }}<span
                                                 class="text-purple-500"></span></h3>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="flex-1 text-right md:text-center">
                                         <h5 class="font-bold uppercase text-gray-600 text-sm">Total Gregg 2 Words</h5>
-                                        <h3 class="font-bold text-2xl text-black">123<span
+                                        <h3 class="font-bold text-2xl text-black">{{ $gregg_2 }}<span
                                                 class="text-green-500"></span></h3>
                                     </div>
                                 </div>
@@ -114,17 +114,15 @@
                     {{-- most populart products --}}
                     <div class="w-full  xl:w-1/3 p-4 lg:pl-10">
                         <div class="bg-white h-96 rounded p-5 shadow-md hover:shadow-xl transition delay-75">
-                            <h3 class="font-bold text-2xl">Most Popular Words</h3>
-                            {{-- @forelse ($popular_items as $popular_item)
+                            <h3 class="font-bold text-2xl">Most Latest Words</h3>
+                            @forelse ($popular_items as $popular_item)
                                 <li>
-                                    <a
-                                        href="{{ route('single_post.review', [$popular_item->article->slug, $popular_item->article->id]) }}">
-                                        {{ \Illuminate\Support\Str::limit($popular_item->article->title, 20) }} -
-                                        {{ \Carbon\Carbon::parse($popular_item->article->created_at)->format('d / M / y - h:i:s A') }}
+                                    <a href="">
+                                        {{ \Illuminate\Support\Str::limit($popular_item->word_name, 20) }}
                                     </a>
                                 </li>
                             @empty
-                            @endforelse --}}
+                            @endforelse
                         </div>
                     </div>
 

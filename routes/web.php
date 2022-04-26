@@ -29,6 +29,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/gregg_2', [Gregg2Controller::class, 'index'])->name('gregg2');
 });
 
+Route::post('/add_viewers', [WordController::class, 'add_viewers'])->name('viewers');
+
 // Admin Account without verification
 Route::middleware(['auth:sanctum', 'is_admin'])->group(function () {
 

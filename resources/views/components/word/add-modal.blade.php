@@ -148,7 +148,7 @@
                                                         <label for="photo_1"
                                                             class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                             <span class="align-middle text-center">Upload a file</span>
-                                                            <input id="photo_1" name="photo_1" type="file" required
+                                                            <input id="photo_1" name="photo_1" type="file"
                                                                 class="sr-only" accept=".jpg,.gif,.png,.jpeg">
                                                         </label>
                                                         {{-- <p class="pl-1">or drag and drop</p> --}}
@@ -176,7 +176,7 @@
                                                         <label for="photo_2"
                                                             class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                             <span class="align-middle text-center">Upload a file</span>
-                                                            <input id="photo_2" name="photo_2" type="file" required
+                                                            <input id="photo_2" name="photo_2" type="file"
                                                                 class="sr-only" accept=".jpg,.gif,.png,.jpeg">
                                                         </label>
                                                         {{-- <p class="pl-1">or drag and drop</p> --}}
