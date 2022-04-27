@@ -22,5 +22,6 @@ class Word extends Model
         'photo_1',
         'photo_2',
         'viewers',
+        'spelling',
     ];
 }

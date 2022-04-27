@@ -60,6 +60,15 @@
                                             </div>
 
 
+                                            <div class=" col-span-6 sm:col-span-4">
+                                                <label for="edit_spelling"
+                                                    class="block text-sm font-medium text-gray-700">Spelling <span
+                                                        class="text-red-600">*</span></label>
+                                                <input type="text" name="spelling" id="edit_spelling" required
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
+
+
 
                                             <div class="form-basic  col-span-6 sm:col-span-4">
                                                 <label for="edit_description"
@@ -296,6 +305,7 @@
                 var description = el.data("item-description");
                 var default_photo = el.data("item-default_photo");
                 var default_video = el.data("item-default_video");
+                var spelling = el.data("item-spelling");
                 var photo_1 = el.data("item-photo_1");
                 var photo_2 = el.data("item-photo_2");
 
@@ -310,6 +320,7 @@
                 $("#edit_category_name").val(category_name);
 
                 $("#edit_status").val(status);
+                $("#edit_spelling").val(spelling);
                 $("#edit_description").val(description);
                 $("#edit_default_video").val(default_video);
 

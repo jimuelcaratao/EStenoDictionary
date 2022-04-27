@@ -59,6 +59,8 @@ class WordController extends Controller
             'word_name' => 'required',
             'category_name' => 'required',
             'status' => 'required',
+            'spelling' => 'required',
+
         ]);
 
         if ($validator->fails()) {
@@ -83,6 +85,7 @@ class WordController extends Controller
             'description' => $request->input('description'),
             'status' => $request->input('status'),
             'default_video' => $request->input('default_video'),
+            'spelling' => $request->input('spelling'),
             'viewers' => $request->input('viewers'),
         ]);
 
@@ -165,6 +168,7 @@ class WordController extends Controller
             'word_name' => 'required',
             'category_name' => 'required',
             'status' => 'required',
+            'spelling' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -179,6 +183,7 @@ class WordController extends Controller
                 'category_name' => $request->input('category_name'),
                 'description' => $request->input('description'),
                 'status' => $request->input('status'),
+                'spelling' => $request->input('spelling'),
                 'default_video' => $request->input('default_video'),
             ]);
 

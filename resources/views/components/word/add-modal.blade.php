@@ -50,6 +50,13 @@
                                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                             </div>
 
+                                            <div class=" col-span-6 sm:col-span-4">
+                                                <label for="spelling"
+                                                    class="block text-sm font-medium text-gray-700">Spelling<span
+                                                        class="text-red-600">*</span></label>
+                                                <input type="text" name="spelling" id="spelling" required
+                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                            </div>
 
 
                                             <div class="form-basic  col-span-6 sm:col-span-4">
@@ -58,8 +65,7 @@
                                                     Description
                                                 </label>
                                                 <div class="mt-1">
-                                                    <textarea id="description" name="description" rows="3"
-                                                        class="shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                                                    <textarea id="description" name="description" rows="3" class="shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
                                                         placeholder="you@example.com"></textarea>
                                                 </div>
                                                 <p class="mt-2 text-sm text-gray-500">
@@ -93,6 +99,7 @@
                                             Link
                                             <span class="text-red-600">*</span></label>
                                         <input type="text" name="default_video" id="default_video" required
+                                            value="https://www.youtube.com/embed/"
                                             placeholder="https://www.youtube.com/embed/6j3hPg0t5fo"
                                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                         <p class="mt-2 text-sm text-gray-500">

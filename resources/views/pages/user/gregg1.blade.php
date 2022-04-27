@@ -43,7 +43,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="result" id="result"></div>
+
                     <div class="steno_result" id="steno_result"></div>
                     <div class="photo_1_result" id="photo_1_result"></div>
                     <div class="photo_2_result" id="photo_2_result"></div>
@@ -106,8 +106,19 @@
                 console.log(obj);
                 if (obj != null) {
                     steno_result.innerHTML = `
-                            <p class="capitalize text-4xl mt-10">${obj.name}'s Steno Video</p>
-                            <p class=" text-lg my-5">${obj.description}
+
+                        <div class="word mt-10">
+                            <h3 class="text-5xl font-semibold capitalize">${obj.name}</h3>
+                        </div>
+                        <div class="details mt-2">
+                            <p>/${obj.spelling}/</p>
+                        </div>
+
+                        <p class="word-example">
+                            ${obj.description || ""}
+                        </p>
+
+                            <p class="capitalize text-2xl mt-10">${obj.name}'s Steno Video and Images</p>
                         <center>
                             </p>
                             <iframe id="ytplayer" type="text/html" class="yt-player mt-10"
@@ -161,9 +172,7 @@
                     .then((data) => {
                         console.log(data);
                         result.innerHTML = `
-            <div class="word">
-                    <h3 class="capitalize">${inpWord}</h3>
-                </div>
+           
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>
                     <p>/${data[0].phonetic}/</p>
@@ -204,6 +213,7 @@
                     description: "{{ $gregg->description }}",
                     category: "{{ $gregg->category_name }}",
                     default_photo: "{{ $gregg->default_photo }}",
+                    spelling: "{{ $gregg->spelling }}",
                     photo_1: "{{ $gregg->photo_1 }}",
                     photo_2: "{{ $gregg->photo_2 }}",
                     },

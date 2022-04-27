@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('word_name', 255);
             $table->longText('description')->nullable();
             $table->string('status');
+            $table->string('spelling', 255);
             $table->text('default_video')->nullable();
             $table->text('default_photo')->nullable();
             $table->text('photo_1')->nullable();
