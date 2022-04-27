@@ -65,6 +65,12 @@
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Word
                             </th>
+
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Spelling
+                            </th>
+
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Category
@@ -108,6 +114,14 @@
                                     <div class="flex">
                                         <div class="text-sm font-medium text-gray-900">
                                             {{ $word->word_name }}
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex">
+                                        <div class="text-sm font-medium text-gray-900">
+                                            {{ $word->spelling }}
                                         </div>
                                     </div>
                                 </td>
@@ -160,6 +174,7 @@
                                         data-item-description="{{ $word->description }}"
                                         data-item-default_photo="{{ $word->default_photo }}"
                                         data-item-default_video="{{ $word->default_video }}"
+                                        data-item-spelling="{{ $word->spelling }}"
                                         data-item-photo_1="{{ $word->photo_1 }}"
                                         data-item-photo_2="{{ $word->photo_2 }}" id="edit-item-word"
                                         class="text-indigo-600 hover:text-indigo-900 mr-3 text-decoration-none">
