@@ -11,9 +11,10 @@
                             E-STENO DICTIONARY WEBSITE.
                         </h1>
                         <p class="mt-4 text-lg text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
+Gregg Shorthand is a system of rapid writing based on the sounds of words that uses the curvilinear motion of ordinary longhand. The Series 90 version, one of the 7 versions of Gregg Shorthand books, was published for the 90th anniversary. The revision involves system changes to make learning and writing easier and more consistent. More word beginnings and endings were dropped. More words are spelled out and not abbreviated as in previous versions. For that reason, it is overall slower than previous versions. It's mostly applicable for business and general note-taking.
+
                         </p>
                     </div>
                 </div>
@@ -36,8 +37,7 @@
                         <div class="px-4 py-5 flex-auto">
                             <h6 class="text-xl font-semibold uppercase">Gregg 1 Dictionary</h6>
                             <p class="mt-2 mb-4 text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit.
+                                Gregg Shorthand Volume One Series 90 consists of better, more logical business letters that have a vast number of unfamiliar words that came from the letters provided by the book.
                             </p>
                             <a href="{{ route('gregg1') }}">
                                 <button
@@ -64,8 +64,7 @@
                             </div>
                             <h6 class="text-xl font-semibold">E-STENO</h6>
                             <p class="mt-2 mb-4 text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit.
+                                It is the expected output of the study, which is an electronic resource that lists the unfamiliar words (in alphabetical order) and explains what they mean.
                             </p>
                         </div>
                     </div>
@@ -75,8 +74,7 @@
                         <div class="px-4 py-5 flex-auto">
                             <h6 class="text-xl font-semibold uppercase">Gregg 2 Dictionary</h6>
                             <p class="mt-2 mb-4 text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit.
+                                Gregg Shorthand Volume Two Series 90 is the continuation of Gregg Shorthand Volume One Series 90.
                             </p>
                             <a href="{{ route('gregg2') }}">
                                 <button
@@ -124,13 +122,10 @@
                         <i class="fas fa-question text-xl"></i>
                     </div>
                     <h3 class="text-3xl mb-2 font-semibold leading-normal" style="color: #261F16;">
-                        What is Stenography?
+                        Gregg 1 Dictionary
                     </h3>
                     <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                        Stenography, commonly known as shorthand, is a method of quick writing that uses
-                        symbols in place of letters, words and phrases. It's used to make note taking easier
-                        in classes, lectures and business meetings. It is still being used to take notes even
-                        with the advent of personal recording devices.
+                        Gregg Shorthand Volume One Series 90 consists of better, more logical business letters that have a vast number of unfamiliar words that came from the letters provided by the book. As part of stenography learning, unfamiliar words are given in the semi-middle part of the book that will help you broaden your vocabulary as well as improve your speed. Unfamiliar words that you might encounter in the Gregg shorthand volume one series 90 book can be found in this part of the E-Steno Dictionary.
                     </p>
                     <a href="{{ route('gregg1') }}">
                         <button
@@ -148,7 +143,7 @@
                 </div>
                 <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                     <img alt="..."
-                        src="https://images.unsplash.com/photo-1590099543482-3b3d3083a474?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=704&q=80"
+                        src="img/gregg/GREGG 1.jpg"
                         class="max-w-full rounded-lg shadow-lg" />
                 </div>
             </div>
@@ -166,7 +161,7 @@
             <div class="items-center flex flex-wrap">
                 <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
                     <img alt="..." class="max-w-full rounded-lg shadow-lg"
-                        src="https://images.unsplash.com/photo-1590099543482-3b3d3083a474?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=704&q=80" />
+                        src="img/gregg/GREGG 2.jpg" />
                 </div>
                 <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
                     <div class="md:pr-12">
@@ -174,12 +169,9 @@
                             class="text-[#261F16] p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
                             <i class="fas fa-book text-xl"></i>
                         </div>
-                        <h3 class="text-3xl font-semibold" style="color: #261F16;">Stenography in early stage</h3>
+                        <h3 class="text-3xl font-semibold" style="color: #261F16;">Gregg 2 Dictionary</h3>
                         <p class="mt-4 text-lg leading-relaxed text-gray-600">
-                            The term "stenography" comes from the Greek word "stenos," which means narrow or small
-                            and refers to the narrowing of words into symbols. Even though the word has come to be
-                            used synonymously with the term shorthand, it technically is the physical process of
-                            transcribing in shorthand either with a writing implement or a stenography machine.
+                            Gregg Shorthand Volume Two Series 90 is the continuation of Gregg Shorthand Volume One Series 90. It consists of more business letters and grammar building. This also consists of a vast number of unfamiliar words. They can be encountered at the very start of the book, given that it is a continuation of volume one. Unfamiliar words that could be encountered in volume two can be found in this part of the E-Steno Dictionary.
                         </p>
                         <a href="{{ route('gregg2') }}">
                             <button
@@ -203,107 +195,131 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap justify-center text-center mb-24">
                 <div class="w-full lg:w-6/12 px-4">
-                    <h2 class="text-4xl font-semibold" style="color: #261F16;">Here are our Team</h2>
-                    <p class="text-lg leading-relaxed m-4 text-gray-600">
+                    <h2 class="text-4xl font-semibold" style="color: #261F16;">Researchers Profile</h2>
+                    {{-- <p class="text-lg leading-relaxed m-4 text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    </p> --}}
                 </div>
             </div>
             <div class="flex flex-wrap">
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
                     <div class="px-6">
-                        <img alt="..." src="img/team/team-1-800x800.jpg"
+                        <img alt="..." src="img/team/Alondra Mae L. Gales - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                         <div class="pt-6 text-center">
-                            <h5 class="text-xl font-bold" style="color: #261F16;">Ryan Tompson</h5>
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Alondra Mae L. Gales</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                                Web Developer
+                                Researcher
                             </p>
-                            <div class="mt-6">
-                                <button
-                                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-                                <button
-                                    class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
                     <div class="px-6">
-                        <img alt="..." src="img/team/team-2-800x800.jpg"
+                        <img alt="..." src="img/team/Angelica B. Delabajan - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                         <div class="pt-6 text-center">
-                            <h5 class="text-xl font-bold" style="color: #261F16;">Romina Hadid</h5>
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Angelica B. Delabajan</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                                Marketing Specialist
+                                Researcher
                             </p>
-                            <div class="mt-6">
-                                <button
-                                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-                                <button
-                                    class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
                     <div class="px-6">
-                        <img alt="..." src="img/team/team-3-800x800.jpg"
+                        <img alt="..." src="img/team/Angelica Claire A. De Vera - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                         <div class="pt-6 text-center">
-                            <h5 class="text-xl font-bold" style="color: #261F16;">Alexa Smith</h5>
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Angelica Claire A. De Vera</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                                UI/UX Designer
+                                Researcher
                             </p>
-                            <div class="mt-6">
-                                <button
-                                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-                                <button
-                                    class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
                     <div class="px-6">
-                        <img alt="..." src="img/team/team-4-470x470.png"
+                        <img alt="..." src="img/team/Bernadine P. Clava - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
                         <div class="pt-6 text-center">
-                            <h5 class="text-xl font-bold" style="color: #261F16;">Jenna Kardi</h5>
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Bernadine P. Clava</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                                Founder and CEO
+                                Researcher
                             </p>
-                            <div class="mt-6">
-                                <button
-                                    class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-                                <button
-                                    class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                                    type="button">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                    <div class="px-6">
+                        <img alt="..." src="img/team/Elsie T. Tangente - Researcher.gif"
+                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        <div class="pt-6 text-center">
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Elsie T. Tangente</h5>
+                            <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                Researcher
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                    <div class="px-6">
+                        <img alt="..." src="img/team/Ericca Joyce N. Santonia - Researcher.png"
+                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        <div class="pt-6 text-center">
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Ericca Joyce N. Santonia</h5>
+                            <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                Researcher
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                    <div class="px-6">
+                        <img alt="..." src="img/team/Hannah Rose T. Delos Poyos - Researcher.jpg"
+                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        <div class="pt-6 text-center">
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Hannah Rose T. Delos Poyos</h5>
+                            <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                Researcher
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                    <div class="px-6">
+                        <img alt="..." src="img/team/Jessa Mae J. Borbe - Researcher.jpg"
+                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        <div class="pt-6 text-center">
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Jessa Mae J. Borbe</h5>
+                            <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                Researcher
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                    <div class="px-6">
+                        <img alt="..." src="img/team/John Francis L. Nabus - Researcher.jpg"
+                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        <div class="pt-6 text-center">
+                            <h5 class="text-xl font-bold" style="color: #261F16;">John Francis L. Nabus</h5>
+                            <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                Researcher
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                    <div class="px-6">
+                        <img alt="..." src="img/team/Sandra Patricia B. Regatcho - Researcher.jpg"
+                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        <div class="pt-6 text-center">
+                            <h5 class="text-xl font-bold" style="color: #261F16;">Sandra Patricia B. Regatcho</h5>
+                            <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                                Researcher
+                            </p>
                         </div>
                     </div>
                 </div>
