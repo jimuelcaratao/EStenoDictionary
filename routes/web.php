@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/about-us', function () {
+    return view('about-us');
+})->name('about');
+
 // Normal Account without verification
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
