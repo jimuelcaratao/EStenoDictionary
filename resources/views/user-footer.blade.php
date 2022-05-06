@@ -4,7 +4,7 @@
         <div class="w-full lg:w-6/12 px-4">
           <a href="#Home"><h4 class="text-3xl font-semibold">E-Steno Dictionary</h4></a>
           <h5 class="text-md mt-0 mb-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            It is the expected output of the study, which is an electronic resource that lists the unfamiliar words (in alphabetical order) and explains what they mean.
           </h5>
           <div class="mt-6">
             <button
