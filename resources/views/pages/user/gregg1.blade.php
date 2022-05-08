@@ -35,7 +35,7 @@
                             <div class="search-input">
                                 <a href="" target="_blank" hidden></a>
                                 <input type="text" placeholder="Type to search.."
-                                    class="text-base text-gray-800 flex-grow outline-none px-2 py-3" id="inp-word">
+                                    class="text-3xl text-gray-800 flex-grow outline-none px-2 py-3" id="inp-word">
                                 <div class="autocom-box" style="background-color: #fff;">
                                 </div>
                                 <div class="icon" id="search-btn"><i class="fas fa-search"
@@ -61,23 +61,16 @@
 
             <div id="About" class="flex flex-wrap items-center mt-32">
                 <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                    <div
-                        class="text-[#261F16] p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-                        <i class="fas fa-question text-xl"></i>
-                    </div>
                     <h3 class="text-3xl mb-2 font-semibold leading-normal" style="color: #261F16;">
-                        What is Stenography?
+                        Gregg 1 Dictionary
                     </h3>
                     <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                        Stenography, commonly known as shorthand, is a method of quick writing that uses
-                        symbols in place of letters, words and phrases. It's used to make note taking easier
-                        in classes, lectures and business meetings. It is still being used to take notes even
-                        with the advent of personal recording devices.
+                        Gregg Shorthand Volume One Series 90 consists of better, more logical business letters that have a vast number of unfamiliar words that came from the letters provided by the book. As part of stenography learning, unfamiliar words are given in the semi-middle part of the book that will help you broaden your vocabulary as well as improve your speed. Unfamiliar words that you might encounter in the Gregg shorthand volume one series 90 book can be found in this part of the E-Steno Dictionary.
                     </p>
                 </div>
                 <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
                     <img alt="..."
-                        src="https://images.unsplash.com/photo-1590099543482-3b3d3083a474?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=704&q=80"
+                        src="img/gregg/GREGG 1.jpg"
                         class="max-w-full rounded-lg shadow-lg" />
                 </div>
             </div>
@@ -111,14 +104,13 @@
                             <h3 class="text-5xl font-semibold capitalize">${obj.name}</h3>
                         </div>
                         <div class="details mt-2">
-                            <p>/${obj.spelling}/</p>
+                            <p class="text-3xl">/${obj.spelling}/</p>
                         </div>
 
-                        <p class="word-example">
+                        <p class="word-example text-3xl">
                             ${obj.description || ""}
                         </p>
 
-                            <p class="capitalize text-2xl mt-10">${obj.name}'s Steno Video and Images</p>
                         <center>
                             </p>
                             <iframe id="ytplayer" type="text/html" class="yt-player mt-10"
@@ -172,7 +164,7 @@
                     .then((data) => {
                         console.log(data);
                         result.innerHTML = `
-           
+
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>
                     <p>/${data[0].phonetic}/</p>
