@@ -115,7 +115,7 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
 
 
 
-            <div id="About" class="flex flex-wrap items-center mt-32">
+            {{-- <div id="About" class="flex flex-wrap items-center mt-32">
                 <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
                     <div
                         class="text-[#261F16] p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
@@ -146,10 +146,10 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         src="img/gregg/GREGG 1.jpg"
                         class="max-w-full rounded-lg shadow-lg" />
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
-    <div class="relative py-20">
+    {{-- <div class="relative py-20">
         <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
             style="height: 80px;">
             <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -190,12 +190,18 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                 </div>
             </div>
         </div>
-    </div>
-    <div id="Team" class="pt-20 pb-48">
+    </div> --}}
+    <div id="Team" class="pt-10 pb-24" style="background-color: #E5E7EB;">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap justify-center text-center mb-24">
-                <div class="w-full lg:w-6/12 px-4">
-                    <h2 class="text-4xl font-semibold" style="color: #261F16;">Researchers Profile</h2>
+                <div class="w-full lg:w-8/12 px-4">
+                    <h2 class="text-2xl font-semibold" style="color: #261F16;">Here are our Team</h2>
+                    <div class="flex gap-x-96 absolute justify-items-center ml-12">
+                    <img src="img/logo/UCC Logo.png" class="w-16" alt=ucc-logo>
+                    <img src="img/logo/PASOA logo.png" class="w-16 ml-48" alt=ucc-logo>
+                    </div>
+                    <h2 class="text-4xl uppercase mt-3" style="color: #261F16;">university of caloocan city</h2>
+
                     {{-- <p class="text-lg leading-relaxed m-4 text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
