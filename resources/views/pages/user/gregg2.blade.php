@@ -62,13 +62,15 @@
                         Gregg 2 Dictionary
                     </h3>
                     <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                        Gregg Shorthand Volume Two Series 90 is the continuation of Gregg Shorthand Volume One Series 90. It consists of more business letters and grammar building. This also consists of a vast number of unfamiliar words. They can be encountered at the very start of the book, given that it is a continuation of volume one. Unfamiliar words that could be encountered in volume two can be found in this part of the E-Steno Dictionary.
+                        Gregg Shorthand Volume Two Series 90 is the continuation of Gregg Shorthand Volume One Series
+                        90. It consists of more business letters and grammar building. This also consists of a vast
+                        number of unfamiliar words. They can be encountered at the very start of the book, given that it
+                        is a continuation of volume one. Unfamiliar words that could be encountered in volume two can be
+                        found in this part of the E-Steno Dictionary.
                     </p>
                 </div>
                 <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                    <img alt="..."
-                        src="img/gregg/GREGG 2.jpg"
-                        class="max-w-full rounded-lg shadow-lg" />
+                    <img alt="..." src="img/gregg/GREGG 2.jpg" class="max-w-full rounded-lg shadow-lg" />
                 </div>
             </div>
         </div>
@@ -97,7 +99,7 @@
                 if (obj != null) {
                     steno_result.innerHTML = `
 
-                    <div class="word mt-10">
+                        <div class="word mt-10">
                             <h3 class="text-5xl font-semibold capitalize">${obj.name}</h3>
                         </div>
                         <div class="details mt-2">
@@ -108,22 +110,24 @@
                             ${obj.description || ""}
                         </p>
 
-                        <center>
-                            </p>
-                            <iframe id="ytplayer" type="text/html" class="yt-player mt-10"
-                                src="${obj.video}" frameborder="0"></iframe>
-                            <img class="wordimg mt-10" src="{{ asset('storage/words_${obj.id}_${obj.default_photo}') }}"
-                                alt="${obj.name}'s steno image">
-
-                        </center>
+                        
                         `;
 
                     if (obj.photo_1 != '') {
                         photo_1_result.innerHTML = `
-                            <center>
+                        <div class="flex inline flex gap-2">
                             <img class="wordimg mt-10" src="{{ asset('storage/words_photo_1_${obj.id}_${obj.photo_1}') }}"
                                 alt="${obj.name}'s steno image">
-                            </center>
+                           
+                            <img class="wordimg mt-10" src="{{ asset('storage/words_${obj.id}_${obj.default_photo}') }}"
+                                alt="${obj.name}'s steno image">
+
+                        </div>
+                        <center>
+
+                            <iframe id="ytplayer" type="text/html" class="yt-player mt-10"
+                            src="${obj.video}" frameborder="0"></iframe>
+                        </center>
                         `;
                     }
 
@@ -196,15 +200,15 @@
             let gregg1_content = [
                 @foreach ($gregg1_arr as $gregg)
                     {
-                    id: "{{ $gregg->word_id }}",
-                    name: "{{ $gregg->word_name }}",
-                    video: "{{ $gregg->default_video }}",
-                    description: "{{ $gregg->description }}",
-                    category: "{{ $gregg->category_name }}",
-                    default_photo: "{{ $gregg->default_photo }}",
-                    spelling: "{{ $gregg->spelling }}",
-                    photo_1: "{{ $gregg->photo_1 }}",
-                    photo_2: "{{ $gregg->photo_2 }}",
+                        id: "{{ $gregg->word_id }}",
+                        name: "{{ $gregg->word_name }}",
+                        video: "{{ $gregg->default_video }}",
+                        description: "{{ $gregg->description }}",
+                        category: "{{ $gregg->category_name }}",
+                        default_photo: "{{ $gregg->default_photo }}",
+                        spelling: "{{ $gregg->spelling }}",
+                        photo_1: "{{ $gregg->photo_1 }}",
+                        photo_2: "{{ $gregg->photo_2 }}",
                     },
                 @endforeach
             ];
