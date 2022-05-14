@@ -192,15 +192,15 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
         </div>
     </div> --}}
     <div id="Team" class="pt-10 pb-24" style="background-color: #E5E7EB;">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-20">
             <div class="flex flex-wrap justify-center text-center mb-24">
                 <div class="w-full lg:w-8/12 px-4">
                     <h2 class="text-2xl font-semibold" style="color: #261F16;">Here are our Team</h2>
-                    <div class="flex gap-x-96 absolute justify-items-center ml-12">
+                    <div class="flex flex-column gap-4">
                     <img src="img/logo/UCC Logo.png" class="w-16" alt=ucc-logo>
-                    <img src="img/logo/PASOA logo.png" class="w-16 ml-48" alt=ucc-logo>
-                    </div>
                     <h2 class="text-4xl uppercase mt-3" style="color: #261F16;">university of caloocan city</h2>
+                    <img src="img/logo/PASOA logo.png" class="w-16" alt=ucc-logo>
+                    </div>
 
                     {{-- <p class="text-lg leading-relaxed m-4 text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -208,8 +208,8 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                     </p> --}}
                 </div>
             </div>
-            <div class="flex flex-wrap">
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Alondra Mae L. Gales - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
@@ -221,7 +221,7 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Angelica B. Delabajan - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
@@ -233,7 +233,7 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Angelica Claire A. De Vera - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
@@ -245,7 +245,7 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Bernadine P. Clava - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
@@ -257,10 +257,10 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Elsie T. Tangente - Researcher.gif"
-                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                            class="shadow-lg rounded-full mx-auto object-contain bg-white" style="width: 125px; height: 125px;"/>
                         <div class="pt-6 text-center">
                             <h5 class="text-xl font-bold" style="color: #261F16;">Elsie T. Tangente</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -269,7 +269,7 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Ericca Joyce N. Santonia - Researcher.png"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
@@ -281,10 +281,10 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Hannah Rose T. Delos Poyos - Researcher.jpg"
-                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        class="shadow-lg rounded-full mx-auto object-contain bg-white" style="width: 125px; height: 125px;" />
                         <div class="pt-6 text-center">
                             <h5 class="text-xl font-bold" style="color: #261F16;">Hannah Rose T. Delos Poyos</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -293,10 +293,10 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Jessa Mae J. Borbe - Researcher.jpg"
-                            class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
+                        class="shadow-lg rounded-full mx-auto object-contain bg-white" style="width: 125px; height: 125px;" />
                         <div class="pt-6 text-center">
                             <h5 class="text-xl font-bold" style="color: #261F16;">Jessa Mae J. Borbe</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -305,7 +305,7 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/John Francis L. Nabus - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
@@ -317,7 +317,7 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-20 mb-12 px-4">
+                <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Sandra Patricia B. Regatcho - Researcher.jpg"
                             class="shadow-lg rounded-full max-w-full mx-auto" style="max-width: 120px;" />
