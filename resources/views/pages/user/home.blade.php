@@ -13,7 +13,13 @@
                         <p class="mt-4 text-lg text-gray-300">
 
 
-Gregg Shorthand is a system of rapid writing based on the sounds of words that uses the curvilinear motion of ordinary longhand. The Series 90 version, one of the 7 versions of Gregg Shorthand books, was published for the 90th anniversary. The revision involves system changes to make learning and writing easier and more consistent. More word beginnings and endings were dropped. More words are spelled out and not abbreviated as in previous versions. For that reason, it is overall slower than previous versions. It's mostly applicable for business and general note-taking.
+                            Gregg Shorthand is a system of rapid writing based on the sounds of words that uses the
+                            curvilinear motion of ordinary longhand. The Series 90 version, one of the 7 versions of
+                            Gregg Shorthand books, was published for the 90th anniversary. The revision involves system
+                            changes to make learning and writing easier and more consistent. More word beginnings and
+                            endings were dropped. More words are spelled out and not abbreviated as in previous
+                            versions. For that reason, it is overall slower than previous versions. It's mostly
+                            applicable for business and general note-taking.
 
                         </p>
                     </div>
@@ -37,7 +43,9 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         <div class="px-4 py-5 flex-auto">
                             <h6 class="text-xl font-semibold uppercase">Gregg 1 Dictionary</h6>
                             <p class="mt-2 mb-4 text-gray-600">
-                                Gregg Shorthand Volume One Series 90 consists of better, more logical business letters that have a vast number of unfamiliar words that came from the letters provided by the book.
+                                Gregg Shorthand Volume One Series 90 consists of better, more logical business letters
+                                that have a vast number of unfamiliar words that came from the letters provided by the
+                                book.
                             </p>
                             <a href="{{ route('gregg1') }}">
                                 <button
@@ -64,7 +72,8 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                             </div>
                             <h6 class="text-xl font-semibold">E-STENO</h6>
                             <p class="mt-2 mb-4 text-gray-600">
-                                It is the expected output of the study, which is an electronic resource that lists the unfamiliar words (in alphabetical order) and explains what they mean.
+                                It is the expected output of the study, which is an electronic resource that lists the
+                                unfamiliar words (in alphabetical order) and explains what they mean.
                             </p>
                         </div>
                     </div>
@@ -74,7 +83,8 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                         <div class="px-4 py-5 flex-auto">
                             <h6 class="text-xl font-semibold uppercase">Gregg 2 Dictionary</h6>
                             <p class="mt-2 mb-4 text-gray-600">
-                                Gregg Shorthand Volume Two Series 90 is the continuation of Gregg Shorthand Volume One Series 90.
+                                Gregg Shorthand Volume Two Series 90 is the continuation of Gregg Shorthand Volume One
+                                Series 90.
                             </p>
                             <a href="{{ route('gregg2') }}">
                                 <button
@@ -197,9 +207,10 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                 <div class="w-full lg:w-8/12 px-4">
                     <h2 class="text-2xl font-semibold" style="color: #261F16;">Here are our Team</h2>
                     <div class="flex flex-column gap-4">
-                    <img src="img/logo/UCC Logo.png" class="w-16" alt=ucc-logo>
-                    <h2 class="text-4xl uppercase mt-3" style="color: #261F16;">university of caloocan city</h2>
-                    <img src="img/logo/PASOA logo.png" class="w-16" alt=ucc-logo>
+                        <img src="img/logo/UCC Logo.png" class="w-16" alt=ucc-logo>
+                        <h2 class="text-4xl uppercase mt-3 mx-auto" style="color: #261F16;">university of caloocan city
+                        </h2>
+                        <img src="img/logo/PASOA logo.png" class="w-16" alt=ucc-logo>
                     </div>
 
                     {{-- <p class="text-lg leading-relaxed m-4 text-gray-600">
@@ -260,7 +271,8 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                 <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Elsie T. Tangente - Researcher.gif"
-                            class="shadow-lg rounded-full mx-auto object-contain bg-white" style="width: 125px; height: 125px;"/>
+                            class="shadow-lg rounded-full mx-auto object-contain bg-white"
+                            style="width: 125px; height: 125px;" />
                         <div class="pt-6 text-center">
                             <h5 class="text-xl font-bold" style="color: #261F16;">Elsie T. Tangente</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -284,7 +296,8 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                 <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Hannah Rose T. Delos Poyos - Researcher.jpg"
-                        class="shadow-lg rounded-full mx-auto object-contain bg-white" style="width: 125px; height: 125px;" />
+                            class="shadow-lg rounded-full mx-auto object-contain bg-white"
+                            style="width: 125px; height: 125px;" />
                         <div class="pt-6 text-center">
                             <h5 class="text-xl font-bold" style="color: #261F16;">Hannah Rose T. Delos Poyos</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
@@ -296,7 +309,8 @@ Gregg Shorthand is a system of rapid writing based on the sounds of words that u
                 <div class="w-full lg:mb-20 mb-12 px-4">
                     <div class="px-6">
                         <img alt="..." src="img/team/Jessa Mae J. Borbe - Researcher.jpg"
-                        class="shadow-lg rounded-full mx-auto object-contain bg-white" style="width: 125px; height: 125px;" />
+                            class="shadow-lg rounded-full mx-auto object-contain bg-white"
+                            style="width: 125px; height: 125px;" />
                         <div class="pt-6 text-center">
                             <h5 class="text-xl font-bold" style="color: #261F16;">Jessa Mae J. Borbe</h5>
                             <p class="mt-1 text-sm text-gray-500 uppercase font-semibold">
