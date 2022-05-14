@@ -18,9 +18,9 @@
                 </li>
                 <li class="flex items-center">
                     <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                        href="#Team">Team</a>
+                        href="http://127.0.0.1:8000/#Team">Team</a>
                 </li>
-                <li class="flex items-center">
+                {{-- <li class="flex items-center">
                     <a href="#Search">
                         <button
                             class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
@@ -28,7 +28,7 @@
                             <i class="fas fa-search"></i> Search
                         </button>
                     </a>
-                </li>
+                </li> --}}
 
                 @if (Auth::user()->is_admin == 1)
                     <li class="flex items-center">
